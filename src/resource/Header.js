@@ -14,6 +14,18 @@ const Header = () => {
         <TouchableOpacity>
           <Image style={style.icon} source={require("../../assets/plus.png")} />
         </TouchableOpacity>
+        <TouchableOpacity>
+          <Image style={style.icon} source={require("../../assets/love.png")} />
+        </TouchableOpacity>
+        <TouchableOpacity>
+          <View style={style.unread_badge}>
+            <Text style={style.unread_badge_text}>11</Text>
+          </View>
+          <Image
+            style={style.icon}
+            source={require("../../assets/facebook-messenger.png")}
+          />
+        </TouchableOpacity>
       </View>
     </View>
   );
@@ -42,6 +54,24 @@ const style = StyleSheet.create({
     height: 30,
     marginLeft: 10,
     resizeMode: "contain",
+  },
+
+  unread_badge: {
+    backgroundColor: "red",
+    position: "absolute",
+    left: 20,
+    bottom: 18,
+    width: 25,
+    height: 18,
+    borderRadius: 25,
+    alignItems: "center",
+    justifyContent: "center",
+    zIndex: 100,
+  },
+
+  unread_badge_text: {
+    color: "white",
+    fontWeight: "600",
   },
 });
 
