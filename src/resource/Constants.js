@@ -63,3 +63,70 @@ export const BOTTOM_ICONS = [
       "https://yt3.ggpht.com/ytc/AKedOLRY9Un_v7Xr9dG1F5NEkqGsGSqwqRz0O3w3r1mI=s900-c-k-c0x00ffffff-no-rj",
   },
 ];
+
+export const POSTS = [
+  {
+    image_url: USERS[4].image,
+    user: USERS[3].user,
+    likes: 2500,
+    caption: "Learning React Native. 😆",
+    profile_pictures: USERS[3].image,
+    comments: [
+      {
+        user: "testing",
+        comment: "Noice ! 😆",
+      },
+      {
+        user: "testing",
+        comment: "Noice ! 😆",
+      },
+      {
+        user: "testing",
+        comment: "Noice ! 😆",
+      },
+    ],
+  },
+  {
+    image_url: USERS[1].image,
+    user: USERS[1].user,
+    likes: 1000,
+    caption: "Learning React Native. 😆",
+    profile_pictures: USERS[1].image,
+    comments: [
+      {
+        user: "testing",
+        comment: "Noice ! 😆",
+      },
+      {
+        user: "testing",
+        comment: "Noice ! 😆",
+      },
+      {
+        user: "testing",
+        comment: "Noice ! 😆",
+      },
+    ],
+  },
+];
+
+export const POST_FOOTER_ICONS = [
+  {
+    name: "Like",
+    image_url: "https://img.icons8.com/fluency-systems-regular/60/ffffff/like",
+    liked_image_url: "https://img.icons8.com/ios-glyphs/90/ffffff/like",
+  },
+  {
+    name: "Comment",
+    image_url: "https://img.icons8.com/material-outlined/80/ffffff/speech",
+  },
+  {
+    name: "Share",
+    image_url:
+      "https://img.icons8.com/material-outlined/60/ffffff/filled-sent.png",
+  },
+  {
+    name: "Save",
+    image_url:
+      "https://img.icons8.com/material-outlined/60/ffffff/bookmark-ribbon--v1.png",
+  },
+];
