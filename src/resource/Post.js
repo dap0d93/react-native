@@ -68,7 +68,11 @@ const PostFooterIcon = ({ image_style, image_url }) => (
 );
 
 const PostLikes = ({ post }) => (
-  <Text style={style.post_likes}>{post.likes.toLocaleString("en")}</Text>
+  <View style={style.post_likes_container}>
+    <Text style={style.post_likes}>
+      {post.likes.toLocaleString("en")} likes
+    </Text>
+  </View>
 );
 
 const style = StyleSheet.create({
@@ -144,8 +148,14 @@ const style = StyleSheet.create({
     height: 27,
   },
 
+  post_likes_container: {
+    flexDirection: "row",
+    marginTop: 4,
+  },
+
   post_likes: {
     color: "white",
+    fontWeight: "700",
   },
 });
 
