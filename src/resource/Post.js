@@ -12,6 +12,7 @@ const Post = ({ post }) => {
       <View style={style.post_footer_container}>
         <PostFooter />
         <PostLikes post={post} />
+        <Caption post={post} />
       </View>
     </View>
   );
@@ -71,6 +72,15 @@ const PostLikes = ({ post }) => (
   <View style={style.post_likes_container}>
     <Text style={style.post_likes}>
       {post.likes.toLocaleString("en")} likes
+    </Text>
+  </View>
+);
+
+const Caption = ({ post }) => (
+  <View style={style.caption_container}>
+    <Text style={style.caption}>
+      <Text style={style.bolded_caption}>{post.user}</Text>
+      <Text> {post.caption}</Text>
     </Text>
   </View>
 );
@@ -155,6 +165,18 @@ const style = StyleSheet.create({
 
   post_likes: {
     color: "white",
+    fontWeight: "700",
+  },
+
+  caption_container: {
+    marginTop: 5,
+  },
+
+  caption: {
+    color: "white",
+  },
+
+  bolded_caption: {
     fontWeight: "700",
   },
 });

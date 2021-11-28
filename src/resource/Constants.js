@@ -90,7 +90,8 @@ export const POSTS = [
     image_url: USERS[1].image,
     user: USERS[1].user,
     likes: 1000,
-    caption: "Learning React Native. 😆",
+    caption:
+      "hkMNkLLB2R4t7sRtTiiac15bOzGLeT5miffT865f2qXKzaa769GI60t7ZKkY, hkMNkLLB2R4t7sRtTiiac15bOzGLeT5miffT865f2qXKzaa769GI60t7ZKkY",
     profile_pictures: USERS[1].image,
     comments: [
       {
