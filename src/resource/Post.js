@@ -14,6 +14,7 @@ const Post = ({ post }) => {
         <PostLikes post={post} />
         <Caption post={post} />
         <CommentSection post={post} />
+        <Comments post={post} />
       </View>
     </View>
   );
@@ -96,6 +97,19 @@ const CommentSection = ({ post }) => (
       </Text>
     )}
   </View>
+);
+
+const Comments = ({ post }) => (
+  <>
+    {post.comments.map((comment, index) => (
+      <View key={index} style={style.comment_section_container}>
+        <Text style={style.caption}>
+          <Text style={style.bolded_caption}>{comment.user}</Text>
+          <Text> {comment.comment}</Text>
+        </Text>
+      </View>
+    ))}
+  </>
 );
 
 const style = StyleSheet.create({
@@ -199,6 +213,11 @@ const style = StyleSheet.create({
 
   view_comment_counter: {
     color: "grey",
+  },
+
+  comment_section_container: {
+    flexDirection: "row",
+    marginTop: 5,
   },
 });
 
