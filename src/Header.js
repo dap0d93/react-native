@@ -7,15 +7,15 @@ const Header = () => {
       <TouchableOpacity>
         <Image
           style={style.logo}
-          source={require("../../assets/header-logo.png")}
+          source={require("../assets/header-logo.png")}
         />
       </TouchableOpacity>
       <View style={style.icons_container}>
         <TouchableOpacity>
-          <Image style={style.icon} source={require("../../assets/plus.png")} />
+          <Image style={style.icon} source={require("../assets/plus.png")} />
         </TouchableOpacity>
         <TouchableOpacity>
-          <Image style={style.icon} source={require("../../assets/love.png")} />
+          <Image style={style.icon} source={require("../assets/love.png")} />
         </TouchableOpacity>
         <TouchableOpacity>
           <View style={style.unread_badge}>
@@ -23,7 +23,7 @@ const Header = () => {
           </View>
           <Image
             style={style.icon}
-            source={require("../../assets/facebook-messenger.png")}
+            source={require("../assets/facebook-messenger.png")}
           />
         </TouchableOpacity>
       </View>
