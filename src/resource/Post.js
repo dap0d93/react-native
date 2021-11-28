@@ -13,6 +13,7 @@ const Post = ({ post }) => {
         <PostFooter />
         <PostLikes post={post} />
         <Caption post={post} />
+        <CommentSection post={post} />
       </View>
     </View>
   );
@@ -82,6 +83,18 @@ const Caption = ({ post }) => (
       <Text style={style.bolded_caption}>{post.user}</Text>
       <Text> {post.caption}</Text>
     </Text>
+  </View>
+);
+
+const CommentSection = ({ post }) => (
+  <View style={style.comments_container}>
+    {!!post.comments.length && (
+      <Text style={style.view_comment_counter}>
+        View {post.comments.length > 1 ? "all " : ""}
+        {post.comments.length}
+        {post.comments.length > 1 ? " comments" : " comment"}
+      </Text>
+    )}
   </View>
 );
 
@@ -178,6 +191,14 @@ const style = StyleSheet.create({
 
   bolded_caption: {
     fontWeight: "700",
+  },
+
+  comments_container: {
+    marginTop: 5,
+  },
+
+  view_comment_counter: {
+    color: "grey",
   },
 });
 
